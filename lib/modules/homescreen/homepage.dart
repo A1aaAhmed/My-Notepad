@@ -1,21 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:tryyy/modules/appbar/appBarScreen/Notifications.dart';
-import 'package:tryyy/modules/appbar/appBarScreen/menu.dart';
-import 'package:tryyy/modules/appbar/appBarScreen/search.dart';
+import 'package:tryyy/modules/appBarScreen/menu.dart';
+import 'package:tryyy/modules/appBarScreen/search.dart';
 
 import '../../layout/appbar/appbar.dart';
-import '../../layout/appbar/homeScreen.dart';
-
-
-
+import '../../layout/homeScreen/homeScreen.dart';
+import '../appBarScreen/Notifications.dart';
 
 //emulator -list-avds
 //emulator @NameOfAvd
 // alt + enter mix the icon in icon button
 
-
-class HomePage extends StatefulWidget{
+class HomePage extends StatefulWidget {
   static int currentScreen=0;
 
 
