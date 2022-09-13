@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'modules/homescreen/homepage.dart';
 
 
 
-import 'package:tryyy/modules/login/login.dart';void main() {
+void main() {
   runApp(const MyApp());//the function wich runs the app
   //click ctl + B to open definition
   //myapp is widget and class myapp
@@ -26,10 +27,9 @@ class MyApp extends StatelessWidget{
 
 
     //matrial app is a home to all the screen in an app
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:LoginScreen(),
-      //LoginScreen(),
+      home:HomePage(),
     );
     // home need widget and also text
     //matrialapp is a built in function that is a same as myapp

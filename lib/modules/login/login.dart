@@ -1,6 +1,8 @@
+
+
 import 'package:flutter/material.dart';
-import '../../shared/components/components.dart';
-import '../homescreen/homepage.dart';
+import 'package:tryyy/modules/homescreen/homepage.dart';
+import 'package:tryyy/shared/components/components.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -131,7 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       print(passwordcont.text);
                       setState(() {
                       if (emailCont.text=='abc@gmail.com' && passwordcont.text=='aaa'){
-                      Navigator.push(context, MaterialPageRoute(builder:(contex)=>HomeScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder:(contex)=>HomePage()));
                       }
                       else {
                         textColor= Colors.red;
