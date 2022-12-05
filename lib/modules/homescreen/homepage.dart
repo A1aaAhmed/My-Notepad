@@ -37,10 +37,13 @@ class _HomePageState extends State<HomePage> {
   //matrial app for the homepage
   //sacfflod for the screens
   return Scaffold(
-    appBar:Bar(),
-    // ignore: avoid_unnecessary_containers
-    body:Screens[HomePage.currentScreen],
-  );
+    appBar: Bar(),
+      // ignore: avoid_unnecessary_containers
+      body: Screens[HomePage.currentScreen],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+      ),
+    );
 
   }
 

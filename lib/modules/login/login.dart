@@ -49,20 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     lable: 'Email Address',
                     prefix: Icons.email,
                     inputType: TextInputType.emailAddress,
-                    validator: (value){
-
-                              // the ? means thet this might have a null value
-                              // the ! even it might have a null value its a save operation
-                              if ( value== null || value.isEmpty){
-                                // value is the writen value in the text form
-
-                              return'email address can\'t be empty';
-                              }
-
-
-                           return null;
-
-                              },
+                    validator: 'email address can\'t be empty',
                   ),
                   const SizedBox(
                     height: 20,
@@ -71,25 +58,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   defualtForm(
                       controller: passwordcont,
                       lable: 'Password',
-                      hidden:notShowPass ,
-                       sufffun: (){
-                         setState(() {
-                        notShowPass= !notShowPass;
-                       }
-                       );},
-
-                      prefix:Icons.password,
-                      inputType: TextInputType.visiblePassword,
-                      postfix: notShowPass?Icons.visibility_off:Icons.visibility,
-                      validator: (value){
-                        if (value == null ||value.isEmpty){
-                          return 'please enter your password';
-                        }
-                        return null;
-                      }
-
-
-
+                    hidden: notShowPass,
+                    sufffun: () {
+                      setState(() {
+                        notShowPass = !notShowPass;
+                      });
+                    },
+                    prefix: Icons.password,
+                    inputType: TextInputType.visiblePassword,
+                    postfix:
+                        notShowPass ? Icons.visibility_off : Icons.visibility,
+                    validator: 'please enter your password',
                   ),
                   const SizedBox(
                     height: 20,

@@ -31,35 +31,33 @@ Widget loginBoutton ({
 );
 Widget defualtForm ({
   required TextEditingController controller,
-  required TextInputType inputType ,
-  Function ? onsubmit ,
-  required Function validator,
+  required TextInputType inputType,
+  Function? onsubmit,
+  required String validator,
   required String lable,
   required IconData prefix,
   IconData? postfix,
   bool hidden = false,
-  Function ? sufffun,
-
-
-
-
-
+  Function? sufffun,
 })=>TextFormField(
-validator:(value){
-  validator(value);
+  validator: (String? value) {
+        if (value == null || value.trim().isEmpty) {
+          return validator;
+        }
 
-  },
-controller: controller,
-keyboardType: inputType,
-obscureText: hidden,
-onFieldSubmitted: (s){ onsubmit!(s);
-  },
- //function that i can do work on it
-
+        return null;
+      },
+      controller: controller,
+      keyboardType: inputType,
+      obscureText: hidden,
+      onFieldSubmitted: (s) {
+        onsubmit!(s);
+      },
+      //function that i can do work on it
 
 // ignore: prefer_const_constructors
-decoration: InputDecoration(
- //hintText: 'abc@examble.com',
+      decoration: InputDecoration(
+        //hintText: 'abc@examble.com',
   labelText: lable,
 border: const OutlineInputBorder(),
 prefixIcon:Icon( prefix,),
